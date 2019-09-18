@@ -1,0 +1,84 @@
+c:\xampp73\htdocs\laravel>php artisan tinker
+Psy Shell v0.9.9 (PHP 7.2.11 — cli) by Justin Hileman
+>>> use \App\Brand;
+>>> Brand::all()
+=> Illuminate\Database\Eloquent\Collection {#3009
+     all: [],
+   }
+>>> $brand = new Brand;
+=> App\Brand {#203}
+>>> $brand->name = "Samsung"
+=> "Samsung"
+>>> $brand->save()
+=> true
+>>> Brand::all()
+=> Illuminate\Database\Eloquent\Collection {#3013
+     all: [
+       App\Brand {#3012
+         id: 1,
+         name: "Samsung",
+         created_at: "2019-09-18 09:20:51",
+         updated_at: "2019-09-18 09:20:51",
+       },
+     ],
+   }
+>>> $brand = new Brand;
+=> App\Brand {#3015}
+>>> $brand->name = "LG"
+=> "LG"
+>>> $brand->save()
+=> true
+>>> quite
+PHP Warning:  Use of undefined constant quite - assumed 'quite' (this will throw an Error in a future version of PHP) in Psy Shell code on line 1
+>>> quit
+Exit:  Goodbye
+
+c:\xampp73\htdocs\laravel>php artisan tinker
+Psy Shell v0.9.9 (PHP 7.2.11 — cli) by Justin Hileman
+>>> use \App\Brand
+>>> $brand = new brand
+=> App\Brand {#3003}
+>>> $brand = Brand::create(["name"=>"Apple"]);
+=> App\Brand {#3014
+     name: "Apple",
+     updated_at: "2019-09-18 09:25:20",
+     created_at: "2019-09-18 09:25:20",
+     id: 3,
+   }
+>>> $brand = Brand::create(["name"=>"Acer"]);
+=> App\Brand {#3007
+     name: "Acer",
+     updated_at: "2019-09-18 09:25:25",
+     created_at: "2019-09-18 09:25:25",
+     id: 4,
+   }
+>>> Brand::all()
+=> Illuminate\Database\Eloquent\Collection {#3015
+     all: [
+       App\Brand {#3017
+         id: 1,
+         name: "Samsung",
+         created_at: "2019-09-18 09:20:51",
+         updated_at: "2019-09-18 09:20:51",
+       },
+       App\Brand {#3018
+         id: 2,
+         name: "LG",
+         created_at: "2019-09-18 09:22:35",
+         updated_at: "2019-09-18 09:22:35",
+       },
+       App\Brand {#3019
+         id: 3,
+         name: "Apple",
+         created_at: "2019-09-18 09:25:20",
+         updated_at: "2019-09-18 09:25:20",
+       },
+       App\Brand {#3020
+         id: 4,
+         name: "Acer",
+         created_at: "2019-09-18 09:25:25",
+         updated_at: "2019-09-18 09:25:25",
+       },
+     ],
+   }
+>>>  
